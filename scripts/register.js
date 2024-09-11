@@ -51,7 +51,6 @@ pets.push(petHolder);
 petHolder=new Pet("Chimera",3,"Female","Cat","Long Hair Tortoishell","Premium Care"); 
 pets.push(petHolder);
 
-//displayCards();
 
 
 //displaying hard coded values for testing
