@@ -27,19 +27,13 @@ function register() {
     pets.push(petHolder); //pushes pet inputs into array pets[]//
 
 
-    for(let i=pets.length-1;i<pets.length;i++){ //displays newly added pet details.
-        console.log(pets[pets.length-1])
-        document.getElementById("show").innerHTML+=`<p><tr class="registered-info">
-        <td>${pets[i].name}</td> 
-        <td>${pets[i].age}</td>
-        <td>${pets[i].gender}</td>
-        <td>${pets[i].petType}</td>
-        <td>${pets[i].breed}</td>
-        <td>${pets[i].service}</td>
-        </tr></p>`
-    }
 
-    /*clear out form*/{
+    clearForm();
+    displayCards();
+    
+}
+
+function clearForm(){
     document.getElementById("txtName").value="";
     document.getElementById("txtAge").value="";
     document.querySelector('input[name="gender"]:checked').checked=false;
@@ -47,8 +41,6 @@ function register() {
     document.getElementById("txtBreed").value="";
     document.getElementById("selectServices").value="";
     }
-}
-
 
 function init(){
     //injecting hard coded values for testing
@@ -59,13 +51,16 @@ pets.push(petHolder);
 petHolder=new Pet("Chimera",3,"Female","Cat","Long Hair Tortoishell","Premium Care"); 
 pets.push(petHolder);
 
+//displayCards();
+
+
 //displaying hard coded values for testing
 for(let i=0;i<pets.length;i++){
     document.getElementById("show").innerHTML+=`<p><tr class="registered-info">
     <td>${pets[i].name}</td>
     <td>${pets[i].age}</td>
     <td>${pets[i].gender}</td>
-    <td>${pets[i].petType}</td>
+    <td>${pets[i].petType}</td> 
     <td>${pets[i].breed}</td>
     <td>${pets[i].service}</td>
     </tr></p>`

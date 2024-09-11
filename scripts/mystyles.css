@@ -238,7 +238,7 @@ header a:hover{
     padding: 10px;
 }
 .service-selector-default{
-    color: lightgray;
+    color: rgb(177, 177, 177);
 }
 .select-container{
     width: 37%;
